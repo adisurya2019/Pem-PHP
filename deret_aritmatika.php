@@ -39,14 +39,9 @@
             <h3>Hasil Deret Aritmatika</h3>
 
             <?php
-            echo $_GET['input1'] . " " . $_GET['input2'];
             $selisih = $_GET['input2'] - $_GET['input1'];
-            for ($i = 2; $i < $_GET['input3']; $i++) {
-                $hasil = $_GET['input2'] + $selisih;
-                echo " $hasil";
-
-                $_GET['input2'] = $hasil;
-            }
+            $hasil = $_GET['input1'] + ($_GET['input3']-1)*$selisih;
+            echo "Jadi, deret ke-n yang dicari adalah"; echo " $hasil";   
             ?>
     </center>
 </body>
